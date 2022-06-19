@@ -7,3 +7,11 @@ Scenario: E01: El viajero visualiza la lista de todos los pedidos disponibles.
     When seleccione “Ganar dinero viajando” 
         And complete los datos requeridos sobre el viaje
     Then el sistema me muestra un panel con todos los pedidos que tienen destinos similares a mi viaje. 
+
+Scenario: E02: El viajero no tiene pedidos disponibles
+
+    Given que me encuentro en el menú principal 
+        And selecciono la opción con el símbolo "+"
+    When seleccione “Ganar dinero viajando” 
+        And complete los datos requeridos sobre el viaje
+    Then el sistema me muestra mensaje indicando que por el momento no hay pedidos que compartan mí mismo destino de viaje. 
